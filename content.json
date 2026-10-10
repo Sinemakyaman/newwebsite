@@ -1,0 +1,112 @@
+{
+  "site": {
+    "lang": "tr",
+    "title": "Ceren Eryılmaz — Değişim Yönetimi Lideri",
+    "footer": "© Ceren Eryılmaz"
+  },
+  "ui": {
+    "skip": "İçeriğe geç",
+    "ctaLabel": "LinkedIn'de bağlantı kur",
+    "showAll": "Tümünü gör",
+    "upcoming": "Yaklaşan",
+    "past": "Geçmiş",
+    "open": "Aç",
+    "linkedinLabel": "LinkedIn",
+    "substackLabel": "Bülten",
+    "nav": [
+      ["deneyim", "Deneyim"], ["sertifikalar", "Sertifikalar"],
+      ["konusmalar", "Konuşmalar"], ["medya", "Yayınlar"], ["iletisim", "İletişim"]
+    ],
+    "sections": {
+      "about": "Hakkında", "experience": "Deneyim", "certs": "Sertifikalar",
+      "education": "Eğitim ve Gelişim", "community": "Üyelikler ve Topluluk",
+      "recognition": "Tanınırlık", "talks": "Konuşmalar", "media": "Yayınlar ve Medya",
+      "cases": "Vaka Çalışmaları", "testimonials": "Referanslar", "contact": "İletişim"
+    },
+    "academicLabel": "Akademik",
+    "programsLabel": "Seçilmiş Gelişim Programları",
+    "contactText": "Birlikte çalışmak, konuşma daveti ya da fikir alışverişi için LinkedIn üzerinden ulaşabilirsiniz."
+  },
+  "identity": {
+    "name": "Ceren Eryılmaz",
+    "title": "Değişim Yönetimi Lideri (Ford Otosan)",
+    "positioning": "Kurumların stratejilerini hayata geçirmelerine ve değişimi günlük çalışma biçimlerine taşımalarına odaklanan dönüşüm ve değişim yönetimi lideri.",
+    "question": "Bir stratejinin insanların günlük kararlarında ve davranışlarında karşılık bulmasını nasıl sağlarız?",
+    "photo": null,
+    "photoAlt": "Ceren Eryılmaz"
+  },
+  "bio": [],
+  "experience": [
+    { "role": "Değişim Yönetimi Lideri", "org": "Ford Otosan", "period": "Temmuz 2023 – günümüz", "verified": true,
+      "summary": "Organizasyonel ve dijital dönüşümde değişimin insan ve organizasyon boyutuna liderlik. Değişime hazırlık, paydaş katılımı, iletişim, benimseme.",
+      "extra": [ { "text": "Kurumsal öğrenme deneyimi platformu gibi girişimlerde proje yönetimi ve değişim yönetimi.", "verified": false } ] },
+    { "role": "Değişim Yöneticisi", "org": "Şişecam", "period": null, "verified": true,
+      "summary": "Organizasyonel ve dijital dönüşüm programlarında değişim yönetimi; yeni yapı, süreç ve teknolojilerin benimsenmesi; paydaş katılımı, değişim etki analizi, organizasyonel hazırlık." },
+    { "role": "Pazarlama, İş Geliştirme ve Müşteri İlişkileri", "org": "Mettler Toledo", "period": "Yaklaşık 10 yıl", "verified": true,
+      "points": [
+        "Relationship Marketing Manager, ABD (Columbus, Ohio): yaklaşık 1,5 yıl uluslararası görev; ABD ve Kanada'da 7 iş birimi.",
+        "İş Analisti, Blue Ocean SAP Dönüşüm Projesi."
+      ] }
+  ],
+  "certificates": [
+    { "name": "MCMP™", "detail": "Master Certified Change Management Professional", "verified": true },
+    { "name": "CCMP®", "detail": "Certified Change Management Professional (ACMP)", "verified": true },
+    { "name": "Prosci® Certified Change Practitioner", "detail": null, "verified": true },
+    { "name": "TIFF Provider", "detail": "Functional Fluency", "verified": true },
+    { "name": "Professional Scrum Product Owner / RSM / RPO", "detail": null, "verified": false },
+    { "name": "Profesyonel Koçluk programı", "detail": null, "verified": false },
+    { "name": "Agile Coaching programı", "detail": null, "verified": false }
+  ],
+  "education": {
+    "academic": [
+      { "name": "Psikoloji yüksek lisansı", "verified": true },
+      { "name": "MBA", "verified": true },
+      { "name": "Dinamik Psikoterapi programı (devam eden eğitim)", "verified": false }
+    ],
+    "programs": [
+      { "org": "Kanban University", "name": "Kanban System Design", "featured": true, "verified": true },
+      { "org": "Adler Central Europe", "name": "Neuroscience for Coaches", "featured": true, "verified": true },
+      { "org": "Functional Fluency Türkiye", "name": "Transactional Analysis", "featured": true, "verified": true },
+      { "org": "Harvard Business School", "name": "Leadership Principles", "featured": true, "verified": false },
+      { "org": "MIT Sloan Executive Education", "name": "Leading Organizations & Change", "featured": true, "verified": false },
+      { "org": "UC Berkeley", "name": "Empathy and Emotional Intelligence at Work", "featured": false, "verified": false },
+      { "org": "Academy of Coaching", "name": "Coaching Foundations, Coaching Presence, World of Possibilities, Coaching in Business Context", "featured": false, "verified": false },
+      { "org": null, "name": "NLP Practitioner, Relationship Coaching, Business Coaching", "featured": false, "verified": false },
+      { "org": "University of Oxford", "name": "Macroeconomics, Social Anthropology, Social Entrepreneurship", "featured": false, "verified": false }
+    ]
+  },
+  "community": [
+    { "name": "ICF Membership", "detail": null, "date": "Nisan 2026", "verified": true },
+    { "name": "ACMP Volunteer", "detail": null, "date": "Eylül 2026", "verified": true },
+    { "name": "Change Awards", "detail": "Uluslararası jüri üyesi", "date": "2026", "verified": true },
+    { "name": "HBR Advisory Council", "detail": null, "date": null, "verified": false }
+  ],
+  "recognition": [
+    { "name": "ACMP Certified Member Stories", "date": "27 Ağustos 2026", "link": null, "verified": true },
+    { "name": "LinkedIn Change Management Top Voice", "date": "2024", "link": null, "verified": false },
+    { "name": "Favikon “Transformation Architects” Top 200 listesinde 17. sıra", "date": "22 Temmuz 2026", "link": null, "verified": false }
+  ],
+  "talks": [
+    { "event": "Eduplus 23. Yıl / 200. Zirve HR Summit", "title": "Teknoloji ve Dijitalleşmenin İnsan Kaynaklarına Etkisi", "role": "Konuşmacı (panel)", "time": "16.10–17.10", "date": "3 Kasım 2026", "year": "2026", "upcoming": true, "verified": true },
+    { "event": "Eduplus HR Summit", "title": null, "role": "Moderatör", "date": "5–8 Mayıs 2026", "year": "2026", "verified": true },
+    { "event": "Tesislerde Proses Emniyeti Sempozyumu", "title": null, "role": "Konuşmacı / panelist", "date": "7–8 Mayıs 2026", "year": "2026", "verified": false },
+    { "event": "Eduplus HR Network Summit", "title": "Başarı için Ekip Yönetimi ve Organizasyonel Performans", "role": "Forum moderatörü", "date": "25 Haziran 2025", "year": "2025", "verified": true },
+    { "event": "Eduplus HR Summit", "title": null, "role": "Moderatör", "date": "Mayıs 2025", "year": "2025", "verified": true },
+    { "event": "ACMP Global Connect", "title": "Ford Otosan dönüşüm deneyimi", "role": null, "date": "2025", "year": "2025", "verified": false },
+    { "event": "İnsan Kaynakları Zirvesi", "title": null, "role": "Konuşmacı", "date": "2024", "year": "2024", "verified": true }
+  ],
+  "media": [
+    { "name": "Proses Sohbetleri", "kind": "ST Endüstri Radyo, Mehmet Dilaver ile — konuk", "text": "Değişim yönetimi, direnç, çalışan katılımı ve büyük ölçekli dönüşümlerin benimsenmesi.", "date": null, "link": null, "verified": true },
+    { "name": "Change Talks: Uncover the Secrets of Change in Public Sector", "kind": "Emin Çobangüç ile, moderatör ve ev sahibi", "text": null, "date": "2024", "link": null, "verified": true },
+    { "name": "Change Management in 20 Mins", "kind": "Podcast", "text": null, "date": null, "link": "https://youtube.com/@Yuliya_and_Ceren", "verified": false },
+    { "name": "From Strategy to Adoption", "kind": "Bülten", "text": null, "date": null, "link": "https://cerenery.substack.com", "verified": true }
+  ],
+  "links": {
+    "linkedin": { "url": "https://linkedin.com/in/ceren-eryilmaz", "verified": true },
+    "substack": { "url": "https://cerenery.substack.com", "verified": true },
+    "youtube": { "url": "https://youtube.com/@Yuliya_and_Ceren", "verified": false },
+    "email": { "value": null, "verified": false }
+  },
+  "cases": [],
+  "testimonials": []
+}

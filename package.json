@@ -1,0 +1,11 @@
+{
+  "name": "ceren-eryilmaz-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node build.mjs && npx serve dist"
+  }
+}
