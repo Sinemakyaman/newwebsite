@@ -1,34 +1,42 @@
-# Ceren Eryılmaz — kişisel site
+# Ceren Eryılmaz — kişisel marka sitesi
 
-Bağımlılıksız statik site. Tüm metin `data/content.json` dosyasındadır; `node build.mjs` bunu `dist/` klasörüne site olarak üretir. Vercel bu komutu otomatik çalıştırır (`vercel.json`).
+Bağımlılıksız statik site. Tüm metin `data/content.json` dosyasındadır; `node build.mjs` bunu `dist/` klasörüne siteye çevirir. Vercel bu komutu otomatik çalıştırır (`vercel.json`).
+
+## Sayfalar
+`/` ana sayfa · `/hakkimda/` · `/deneyim/` · `/konusmalar/` · `/yayinlar/` · `/iletisim/` · 404
+
+Ana sayfa seçilmiş özetleri gösterir; ayrıntılı ve eksiksiz içerik alt sayfalardadır (sertifikalar, eğitim ve tanınırlık "Hakkımda" sayfasındadır).
 
 ## Klasörler
 - `data/content.json` — bütün içerik (metinler, linkler, tarihler)
-- `public/assets/` — fotoğraflar (`ceren-eryilmaz-*.webp/.jpg` hero portresi, `og-image.jpg` sosyal paylaşım görseli)
-- `public/fonts/` — kendi sunucumuzdan yüklenen yazı tipleri (SIL Open Font License, lisans dosyaları yanlarında)
-- `styles.css`, `client.js` — görünüm ve küçük tarayıcı betiği (mobil menü, etkinlik sınıflandırma)
+- `public/assets/` — fotoğraflar; `public/fonts/` — kendi sunucumuzdan yüklenen yazı tipleri (SIL OFL, lisans dosyaları yanlarında)
+- `styles.css`, `client.js` — görünüm; mobil menü, kaydırma animasyonu ve etkinlik sınıflandırma
 - `build.mjs`, `lib/talks.mjs` — site üretici ve etkinlik tarih mantığı
-- `scripts/test-talks.mjs` — etkinlik tarih mantığı testi (`npm test`)
+- `scripts/test-talks.mjs` — tarih mantığı testi (`npm test`)
+
+## Görsel kimlik
+Lacivert `#102A43`, sıcak krem `#F5F0E8`, beyaz, ölçülü şampanya altını `#C5A46D`. Başlıklarda Cormorant (serif), metinde Hanken Grotesk. Renkler `styles.css` başındaki `:root` değişkenlerindedir. Altın, açık zeminde metin rengi olarak kullanılmaz (kontrast yetersiz); yerine koyu altın `--gold-ink` kullanılır.
 
 ## İçerik düzenleme
-- **Yayın durumu:** Her kaydın `"verified"` alanı vardır. `true` (veya hiç yazılmamış) ise sitede görünür, `false` ise gizlenir. Build her çalıştığında hangi kayıtların gizli kaldığını ekrana yazar, böylece yanlışlıkla gizli kalan içerik fark edilir.
-- **Eksik linkler:** `link: null` olan kayıt linksiz yayınlanır. Link geldiğinde `null` yerine `"https://..."` yazmanız yeter (örn. `media` altındaki Proses Sohbetleri ve Change Talks, `recognition` altındaki kayıtlar). Bağlantının görünen yazısı `linkLabel` alanındadır.
-- **E-posta:** `links.email.value` alanına adresi yazıp `verified: true` yapın; iletişim bölümünde otomatik görünür.
-- **Biyografi:** `bio` listesindeki her satır bir paragraftır.
-- **Vaka çalışmaları / referanslar:** `cases` ve `testimonials` listeleri doluysa bölümler kendiliğinden görünür, boşken görünmez.
+- **Yayın durumu:** Her kaydın `"verified"` alanı vardır. `true` (veya yazılmamış) ise görünür, `false` ise gizlenir. Build her çalıştığında gizli kalan kayıtları listeler.
+- **Eksik linkler:** `link: null` olan kayıt linksiz yayınlanır. Link geldiğinde `null` yerine `"https://..."` yazın (`media`, `recognition`, `talks`). Bağlantı yazısı `linkLabel` alanındadır.
+- **Fotoğraflı kartlar:** `talks[].image` (ve `imageAlt`) ile `media[].image` alanları hazırdır; etkinlik fotoğrafı eklenince `public/assets/` içine koyup yolunu yazın.
+- **E-posta:** `links.email.value` alanına adresi yazıp `verified: true` yapın; üst/alt bilgide ve iletişim sayfasında otomatik görünür.
+- **Biyografi:** `bio` listesindeki her satır bir paragraftır. **Uzmanlık alanları:** `expertise`. **Fotoğraflar bölümü:** `gallery`.
+- **Vaka çalışmaları / referanslar:** `cases`, `testimonials` (şu an sitede gösterilmiyor).
 
 ## Etkinlikler ve tarihler
-Her etkinliğin `start` (ve çok günlüyse `end`) alanı ISO biçimindedir: `"2026-11-03"` (tam gün), `"2025-05"` (yalnızca ay), `"2024"` (yalnızca yıl). Etkinlik bittikten sonraki gün otomatik olarak "Geçmiş" listesine geçer; ekrandaki tarih metni (`3 Kasım 2026`, `5–8 Mayıs 2026`) bu alanlardan üretilir. Geçiş hem build sırasında hem de ziyaretçinin tarayıcısında hesaplanır, yani site yeniden yayınlanmasa bile doğru kalır. Hatalı biçimde tarih yazılırsa build, hangi etkinlikte hata olduğunu söyleyerek durur.
+`start` (çok günlüyse `end`) ISO biçimindedir: `"2026-11-03"`, `"2025-05"` (yalnızca ay) veya `"2024"` (yalnızca yıl). Etkinlik bittikten sonraki gün otomatik olarak "Geçmiş"e geçer. Hesap hem build sırasında hem ziyaretçinin tarayıcısında yapılır; yeniden yayın gerekmez. Hatalı tarih yazılırsa build hangi etkinlikte hata olduğunu söyleyerek durur.
 
 ## Alan adı ve SEO
-`site.url` alanına alan adını yazın (örn. `"https://www.ornek.com"`). Canonical, `og:url`, `og:image`, `sitemap.xml` ve JSON-LD buradan üretilir. Bu alan boşsa build, Vercel'in verdiği adresi (`VERCEL_PROJECT_PRODUCTION_URL`) kullanır; o da yoksa bu etiketleri üretmez ve uyarı verir. Kendi alan adını bağladığınızda `site.url`'yi güncellemeyi unutmayın.
+`site.url` alanına alan adını yazın (ör. `"https://www.ornek.com"`). Canonical, `og:url`, `og:image`, `sitemap.xml` ve JSON-LD buradan üretilir. Boşsa build Vercel'in verdiği adresi kullanır; o da yoksa bu etiketleri üretmez ve uyarı verir. Her sayfanın başlığı ve açıklaması `site.pages` içindedir. Sayfa adresleri `/` ile biter (`vercel.json` içinde `trailingSlash: true`).
 
 ## Fotoğraf değiştirme
-Yeni portre için aynı adlandırmayla `ceren-eryilmaz-480.webp`, `-760.webp`, `-960.webp` (4:5 oran) ve `-760.jpg` dosyalarını `public/assets/` içine koyun. Sosyal paylaşım görseli 1200×630 piksel `og-image.jpg` olmalıdır.
+Aynı adlandırmayla (`ceren-eryilmaz-480/760/960.webp` ve `-760.jpg` hero, `ceren-hakkinda-*` hakkında portresi, `ceren-galeri-*` galeri) dosyaları `public/assets/` içine koyun. Sosyal paylaşım görseli 1200×630 piksel `og-image.jpg` olmalıdır.
 
 ## Yerelde deneme
 ```
 node build.mjs
 npx serve dist
 ```
-Build, iç not işareti (`DOĞRULA`, `EKSİK`, köşeli parantez) veya bozuk JSON/tarih bulursa durur; Vercel'de bu durumda önceki yayın olduğu gibi kalır.
+Build, iç not işareti (`DOĞRULA`, `EKSİK`, köşeli parantez), bozuk JSON veya bozuk tarih bulursa durur; Vercel'de bu durumda önceki yayın olduğu gibi kalır.
